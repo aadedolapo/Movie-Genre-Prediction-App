@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" type="text/css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- <link rel="stylesheet" href="font-awesome-4.7.0 2/css/font-awesome.min.css"> -->
+    <script src="https://use.fontawesome.com/a364ece05e.js"></script>
+</head>
+<body>
+    <div class="web">
+        <div class="login">
+          <div>
+            <h1>Movie Genre Prediction</h1>
+            <form action="{{url_for('predict')}}" method="POST">
+              <input
+                type="text"
+                id="movie_plot"
+                name="movie_plot"
+                placeholder="Enter a movie plot"
+                required="required"
+              />
+              <input
+                type="submit"
+                id="submission_button"
+                class="btn btn-primary btn-block btn-large"
+                value="Predict Genre"
+              />
+            </form>
+  
+            <br />
+            <p>Movie genre(s) should include at least one of the following:</p>
+            <b class="prediction">{{prediction_text}}</b>
+            <br />
+            <br />
+            <p class="paragraph"><i>This model takes in a movie plot and predicts the genre.</p>
+            <p class="paragraph"><i>The more detailed the movie plot is,</i></p> 
+            <p class="paragraph"><i>the more accurate the predicted genres are to the actual genres.</i></p>
+            <br />
+            <p class="paragraph"><i><b>PS:</b> To get the detailed plot of a movie, go to the wikipedia page of the movie.</i></p>
+            <br />
+          </div>
+        </div>
+        <div class="footer">
+          <a href="https://www.twitter.com/theadedolapo"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/dolapoadebo"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+          <a href="https://www.github.com/aadedolapo"><i class="fa fa-github" aria-hidden="true"></i></a>
+        </div>
+      </div>
+</body>
+</html>
